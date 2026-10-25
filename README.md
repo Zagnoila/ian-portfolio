@@ -3,11 +3,14 @@
 A responsive HTML/CSS portfolio based on Ian’s three-page Figma design.
 
 ## View
-https://ian-rosenthal-portfolio.scattercat.chatgpt.site/
+https://ian-rosenthal-portfolio.netlify.app/
 
 ## Run
 Open `dist/index.html` in a browser. No package installation or build step is needed.
 For a local server, run `python3 -m http.server 8773 --directory dist` from this folder.
+
+## Deploy updates
+This site is published with Netlify Drop. Upload the contents of `dist` (or a ZIP with `index.html` at its root) to the existing Netlify project. GitHub changes do not deploy automatically.
 
 ## Edit
 - `dist/index.html`: introduction, photo, skills, and contact
