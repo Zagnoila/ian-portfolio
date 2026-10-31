@@ -6,3 +6,22 @@
 @media(max-width:650px){:root{--section:40px}.wrap{width:calc(100% - 40px)}header.wrap{gap:20px;align-items:flex-start;flex-wrap:wrap;padding:22px 0}.brand{font-size:22px}nav{gap:20px}nav a{font-size:13px}.hero,.columns,.columns.three{grid-template-columns:1fr;gap:32px}.hero{padding:0}h1{font-size:44px}h2{font-size:32px}body{font-size:16px}.hero figure{max-width:476px}.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:16px}.footer-title{font-size:20px}.placeholder{padding:32px 24px}}
 
 .wrap > div + .columns, .wrap > .columns + div {margin-top:24px}
+
+/* Contact icons share the same appearance on every page. */
+.contact-heading {font:600 18px/1.4 Inter,Arial,sans-serif;margin:0 0 16px}
+.contact-links,.project-links {display:flex;flex-wrap:wrap;gap:12px}
+.contact-links {margin:24px 0}
+.icon-link {display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 16px;border:1px solid var(--border);border-radius:3px;text-decoration:none;font-size:14px}
+.icon-link:hover {background:var(--green);color:var(--background)}
+.icon {width:20px;height:20px;flex-shrink:0}
+/* Grid places cards in rows; each card is a small self-contained project. */
+.project-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.project-card {border:1px solid var(--border);background:var(--surface);display:flex;flex-direction:column;min-width:0}
+.project-card > img {display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;background:#e4e9df}
+.project-card-body {padding:24px;display:flex;flex-direction:column;flex:1}
+.project-card h3 {font-size:22px}
+.project-card .skills {margin-bottom:24px}
+.project-links {margin-top:auto}
+.project-links .icon-link {padding:8px 10px;font-size:13px;gap:8px}
+@media(max-width:1000px) {.project-grid {grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px) {.project-grid {grid-template-columns:1fr}.project-card-body {padding:20px}.contact-links {gap:10px}}

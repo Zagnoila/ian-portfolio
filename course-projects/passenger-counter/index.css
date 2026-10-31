@@ -1,0 +1,56 @@
+body {
+    background: #dce5dc;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #203b2d;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+.counter {
+    background: #f8f8f0;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 25px 15px;
+    border: 2px solid #355d43;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#increment-btn {
+    background: #7d3030;
+}
+
+#save-btn {
+    background: #2f603d;
+}
+
+#save-el {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.note {
+    font-size: 14px;
+    line-height: 1.5;
+}

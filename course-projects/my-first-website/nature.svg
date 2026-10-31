@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="860" viewBox="0 0 720 860">
+  <title>A quiet place outside</title>
+  <desc>An original illustration of a sunlit river valley, mountains, and evergreen trees.</desc>
+  <rect width="720" height="860" fill="#dcdabf"/>
+  <circle cx="511" cy="177" r="76" fill="#be7852"/>
+  <path d="M0 345L131 210 223 293 338 159 498 339 602 252 720 361V860H0Z" fill="#9fa995"/>
+  <path d="M0 438L129 322 244 410 394 279 565 432 720 321V860H0Z" fill="#6f8b76"/>
+  <path d="M0 530Q178 389 359 493T720 471V860H0Z" fill="#466a56"/>
+  <path d="M409 450C300 507 535 559 402 625S256 754 338 860H574C411 745 436 711 510 641S361 509 429 450Z" fill="#ccceaf"/>
+  <path d="M0 639Q113 511 297 602L195 860H0Z" fill="#2c5140"/>
+  <path d="M720 573Q585 545 524 724L621 860H720Z" fill="#304e3e"/>
+  <g fill="#233e32">
+    <path d="M79 412L17 569H51L4 669H61V780H91V669H154L108 569H143Z"/>
+    <path d="M177 502L131 612H153L112 701H164V798H187V701H237L202 612H225Z"/>
+    <path d="M647 394L583 552H613L567 664H632V804H661V664H720L681 552H713Z"/>
+  </g>
+  <g stroke="#e4e0c9" stroke-width="2" fill="none" opacity=".55"><path d="M393 569Q437 571 455 587M343 697Q374 684 413 692M361 774L398 759"/></g>
+  <g stroke="#536c56" stroke-width="3" fill="none"><path d="M103 142l13-8 14 8M156 161l12-7 12 7"/></g>
+</svg>
