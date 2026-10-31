@@ -17,7 +17,7 @@
 /* Grid places cards in rows; each card is a small self-contained project. */
 .project-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .project-card {border:1px solid var(--border);background:var(--surface);display:flex;flex-direction:column;min-width:0}
-.project-card > img {display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;background:#e4e9df}
+.project-image img {display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain;background:#e4e9df}
 .project-card-body {padding:24px;display:flex;flex-direction:column;flex:1}
 .project-card h3 {font-size:22px}
 .project-card .skills {margin-bottom:24px}
@@ -25,3 +25,55 @@
 .project-links .icon-link {padding:8px 10px;font-size:13px;gap:8px}
 @media(max-width:1000px) {.project-grid {grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px) {.project-grid {grid-template-columns:1fr}.project-card-body {padding:20px}.contact-links {gap:10px}}
+
+/* Option 1: quiet motion, using the same colors and layout. */
+.reveal {transition:opacity 600ms ease-out, transform 600ms ease-out}
+.reveal.is-waiting {opacity:0;transform:translateY(16px)}
+.project-card {transition:opacity 600ms ease-out, transform 250ms ease-out, border-color 250ms ease-out}
+.project-card:focus-within {border-color:var(--green)}
+.button,.icon-link {transition:transform 200ms ease-out, background-color 200ms ease-out, color 200ms ease-out}
+@media (hover:hover) and (pointer:fine) {
+  .project-card:not(.is-waiting):hover {transform:translateY(-4px);border-color:var(--green)}
+  .button:hover,.icon-link:hover {transform:translateY(-2px)}
+}
+/* Respect visitors who have asked their device to reduce motion. */
+@media (prefers-reduced-motion:reduce) {
+  .reveal,.project-card,.button,.icon-link {transition:none !important;transform:none !important}
+  .reveal.is-waiting {opacity:1}
+}
+
+/* A few extra CSS animations: an entrance, an underline, and image zoom. */
+nav a {position:relative}
+nav [aria-current=page] {border-bottom-color:transparent}
+nav a::after {content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform 250ms ease-out}
+nav a:hover::after,nav a:focus-visible::after,nav [aria-current=page]::after {transform:scaleX(1)}
+.project-image {overflow:hidden}
+.project-image img {transition:transform 450ms ease-out}
+@media (hover:hover) and (pointer:fine) {
+  .project-card:hover .project-image img {transform:scale(1.035)}
+}
+@keyframes title-arrives {
+  from {opacity:0;transform:translateY(12px)}
+  to {opacity:1;transform:translateY(0)}
+}
+@media (prefers-reduced-motion:no-preference) {
+  main h1 {animation:title-arrives 700ms ease-out}
+}
+@media (prefers-reduced-motion:reduce) {
+  nav a::after,.project-image img {transition:none !important}
+  .project-card:hover .project-image img {transform:none}
+}
+
+/* Opening scene: one soft passing light, then rest. */
+.opening-scene {position:relative;isolation:isolate}
+.intro-art {position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.intro-light {position:absolute;inset:-60% -30%;background:linear-gradient(110deg,transparent 35%,#acc5a529 49%,transparent 63%);opacity:0}
+@keyframes light-passes {
+ 0% {transform:translateX(-65%);opacity:0}
+ 25% {opacity:1}
+ 75% {opacity:1}
+ 100% {transform:translateX(65%);opacity:0}
+}
+@media (prefers-reduced-motion:no-preference) {
+ .intro-light {animation:light-passes 3800ms ease-in-out both}
+}
