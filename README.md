@@ -35,3 +35,14 @@ The Projects page keeps its three featured projects and adds seven smaller proje
 Icons: Bootstrap Icons v1.11.3 (MIT), https://icons.getbootstrap.com/. SVG files and the original license are in `dist/assets/icons/`.
 
 Publication: the source belongs in this GitHub repository; deploy the dist folder separately to the existing Netlify project.
+
+
+## Portfolio update — November 8, 2026
+
+Added Root Spa as the fourth featured project, its original-trial photo gallery and captioned 35-second video, extension case notes (Crop Library / Leads Ledger), SketchUp practice and kitchen-concept case notes, and the AI-assisted Midnight City Blender scene gallery. Existing project links are preserved.
+
+Root Spa status confirmed by Ian: replacement arrived; seeds and journals have not started. The rectangular kitchen reservoir is a separate proposed design, not the physical Root Spa bucket. All model dimensions remain to be verified. No harvest, yield, or growth records are claimed.
+
+Assets: Root Spa stills come from Ian's original October footage; compressed video preserves the earlier status card, explained on the page. Crop Library demo shows the installed extension in Brave. SketchUp lettuce asset: “lettuce” by sun O., 3D Warehouse. Midnight City renders come from the existing 3D project, which used AI-assisted modeling/rendering.
+
+Publish the `dist` folder to the existing Netlify project. Updating GitHub alone does not deploy this manually hosted site. Future journal entries belong in the `journal` section of `dist/rootspa-case-study.html`, with a real date, photograph, observation, and next action.
