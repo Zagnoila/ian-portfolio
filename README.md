@@ -3,18 +3,18 @@
 A responsive HTML/CSS portfolio based on Ian’s three-page Figma design.
 
 ## View
-https://ian-rosenthal-portfolio.netlify.app/
+https://zagnoila.github.io/ian-portfolio/
 
 ## Run
 Open `dist/index.html` in a browser. No package installation or build step is needed.
 For a local server, run `python3 -m http.server 8773 --directory dist` from this folder.
 
 ## Deploy updates
-This site is published with Netlify Drop. Upload the contents of `dist` (or a ZIP with `index.html` at its root) to the existing Netlify project. GitHub changes do not deploy automatically.
+The current portfolio is hosted on GitHub Pages for free. Pages publishes the root of the `gh-pages` branch. Keep the editable source in `main/dist`; publish its contents to the root of `gh-pages`, preserving `.nojekyll`. Updates to `gh-pages` trigger deployment; updates to `main` alone do not. The older Netlify site is unchanged because its team has exhausted deployment credits.
 
 ## Edit
 - `dist/index.html`: introduction, photo, skills, and contact
-- `dist/projects.html`: three featured projects and a seven-tile course-project grid
+- `dist/projects.html`: four featured projects and an eleven-card project grid
 - `dist/case-study.html`: agriculture case study
 - `dist/business-card-case-study.html` and `dist/plant-case-study.html`: project-specific starters
 - `dist/farm-plan.html` and `dist/sop.html`: clearly labeled document starters
@@ -34,7 +34,7 @@ The Projects page keeps its three featured projects and adds seven smaller proje
 
 Icons: Bootstrap Icons v1.11.3 (MIT), https://icons.getbootstrap.com/. SVG files and the original license are in `dist/assets/icons/`.
 
-Publication: the source belongs in this GitHub repository; deploy the dist folder separately to the existing Netlify project.
+Publication: `main` holds the source; `gh-pages` holds the current published site.
 
 
 ## Portfolio update — November 8, 2026
@@ -45,4 +45,4 @@ Root Spa status confirmed by Ian: replacement arrived; seeds and journals have n
 
 Assets: Root Spa stills come from Ian's original October footage; compressed video preserves the earlier status card, explained on the page. Crop Library demo shows the installed extension in Brave. SketchUp lettuce asset: “lettuce” by sun O., 3D Warehouse. Midnight City renders come from the existing 3D project, which used AI-assisted modeling/rendering.
 
-Publish the `dist` folder to the existing Netlify project. Updating GitHub alone does not deploy this manually hosted site. Future journal entries belong in the `journal` section of `dist/rootspa-case-study.html`, with a real date, photograph, observation, and next action.
+Publish the contents of `main/dist` to the root of `gh-pages` for GitHub Pages. Future journal entries belong in the `journal` section of `dist/rootspa-case-study.html`, with a real date, photograph, observation, and next action.
